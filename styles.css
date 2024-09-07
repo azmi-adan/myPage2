@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    background: url('https://i.pinimg.com/564x/f7/b6/5f/f7b65faebfde66c7d2b5945f569f4322.jpg') no-repeat center center fixed; /* Background keffiyeh image */
+    background-size: cover; /* Cover the entire background */
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #0f0; /* Bright green color for links */
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #0f0;
+    text-shadow: 0 0 10px #0f0; /* Glow effect on hover */
+}
+
+section {
+    padding: 80px 20px;
+    margin-top: 60px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+    border-radius: 10px;
+}
+
+h1, h2 {
+    color: #0f0; /* Bright green color for headings */
+    text-shadow: 0 0 10px #0f0; /* Glow effect for headings */
+}
+
+.flag-image {
+    width: 300px;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #0f0; /* Green border for the flag image */
+    border-radius: 10px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #0f0; /* Green border for profile picture */
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    margin-top: 10px;
+}
+
+.contact-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #00f;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
