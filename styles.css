@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #fff;
+    color: #eeee27;
     background: url('https://i.pinimg.com/564x/f7/b6/5f/f7b65faebfde66c7d2b5945f569f4322.jpg') no-repeat center center fixed; /* Background keffiyeh image */
     background-size: cover; /* Cover the entire background */
 }
@@ -56,15 +56,109 @@ h1, h2 {
     color: #0f0; /* Bright green color for headings */
     text-shadow: 0 0 10px #0f0; /* Glow effect for headings */
 }
-
+/* Flag image with hover animation */
 .flag-image {
     width: 300px;
     display: block;
     margin: 20px auto;
     border: 2px solid #0f0; /* Green border for the flag image */
     border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transition effects */
 }
 
+/* On hover: scale up the image and add a glowing border */
+.flag-image:hover {
+    transform: scale(1.05); /* Slightly increase the size */
+    box-shadow: 0 0 15px 5px rgba(0, 255, 0, 0.6); /* Green glowing shadow */
+    border-color: #00ff00; /* Change border color to a brighter green */
+}
+/* Additional styling for the flag info section */
+.flag-info {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better readability */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px; /* Limit the width of the info section */
+    text-align: left;
+}
+
+.flag-info h3 {
+    color: #0f0; /* Bright green color for subheadings */
+    text-shadow: 0 0 5px #0f0; /* Glow effect for subheadings */
+}
+
+.flag-info ul {
+    list-style: disc;
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.flag-info p {
+    margin: 10px 0;
+}
+
+/* Special styling for each color's meaning */
+.black-meaning strong {
+    color: #f2ebeb; /* Black color for the text */
+}
+
+.white-meaning strong {
+    color: #fff; /* White color for the text */
+}
+
+.green-meaning strong {
+    color: #0f0; /* Green color for the text */
+}
+
+.red-meaning strong {
+    color: #f00; /* Red color for the text */
+}
+/* New section styling */
+#watermelon {
+    padding: 80px 20px;
+    margin-top: 60px;
+    text-align: center;
+    background: rgba(32, 32, 32, 0.6); /* Semi-transparent background for readability */
+    border-radius: 10px;
+}
+
+.watermelon-image {
+    width: 300px;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #f00; /* Red border for the watermelon image */
+    border-radius: 10px;
+    animation: pulse 2s infinite; /* Add animation */
+}
+
+/* Keyframes for pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Original size */
+    }
+    50% {
+        transform: scale(1.05); /* Slightly larger */
+    }
+    100% {
+        transform: scale(1); /* Back to original size */
+    }
+}
+
+
+.watermelon-info {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better readability */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px; /* Limit the width of the info section */
+    text-align: left;
+}
+
+
+
+/* Profile picture container */
 .profile {
     display: flex;
     flex-direction: column;
@@ -73,18 +167,34 @@ h1, h2 {
     text-align: center;
 }
 
+/* Profile picture with hover animation */
 .profile-picture {
     border-radius: 50%;
     margin-bottom: 20px;
     width: 200px;
     height: 200px;
     border: 2px solid #0f0; /* Green border for profile picture */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transition effects */
 }
+
+/* On hover: scale up the image and add a glowing border */
+.profile-picture:hover {
+    transform: scale(1.1); /* Slightly increase the size */
+    box-shadow: 0 0 15px 5px rgba(0, 255, 0, 0.6); /* Green glowing shadow */
+    border-color: #00ff00; /* Change border color to a brighter green */
+}
+
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffcc00;
+    padding: 20px 0;
     text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    border-top: 2px solid #ffcc00;
+    position: relative; /* Default positioning */
+    bottom: 0;
+    width: 100%;
+    margin-top: auto; /* Push the footer to the bottom */
 }
 
 .footer-content {
@@ -92,24 +202,139 @@ footer {
     margin: 0 auto;
 }
 
-.contact-info {
-    margin-top: 10px;
-}
-
 .contact-info h3 {
-    margin: 0;
-    font-size: 1.2em;
-}
-
-.contact-info p {
-    margin: 5px 0;
+    color: #ffcc00;
 }
 
 .contact-info a {
-    color: #00f;
-    text-decoration: none;
+    color: #ffcc00;
 }
 
 .contact-info a:hover {
-    text-decoration: underline;
+    text-shadow: 0 0 10px #ffcc00;
+}
+/* Mobile first approach */
+/* Base styles are already mobile-friendly, we'll enhance for larger screens */
+
+/* For tablets (min-width: 600px) */
+@media (min-width: 600px) {
+    body {
+        font-size: 1.1em; /* Slightly larger font on tablets */
+    }
+
+    header nav ul {
+        justify-content: space-around;
+    }
+
+    section {
+        padding: 100px 30px;
+    }
+
+    .flag-image {
+        width: 400px; /* Larger image on tablets */
+    }
+
+    .profile-picture {
+        width: 250px;
+        height: 250px;
+    }
+
+    footer {
+        padding: 30px 0;
+    }
+}
+
+/* For small laptops and large tablets (min-width: 768px) */
+@media (min-width: 768px) {
+    body {
+        font-size: 1.2em;
+    }
+
+    header nav ul {
+        justify-content: space-evenly;
+    }
+
+    section {
+        padding: 120px 40px;
+    }
+
+    .flag-image {
+        width: 450px; /* Adjusting the image size */
+    }
+
+    .profile {
+        flex-direction: row; /* Display profile picture and text side by side */
+        text-align: left;
+    }
+
+    .profile-picture {
+        width: 300px;
+        height: 300px;
+        margin-right: 20px;
+    }
+}
+
+/* For laptops and desktops (min-width: 1024px) */
+@media (min-width: 1024px) {
+    body {
+        font-size: 1.3em;
+    }
+
+    header {
+        padding: 20px 0;
+    }
+
+    header nav ul li {
+        margin: 0 30px;
+    }
+
+    section {
+        padding: 140px 50px;
+    }
+
+    .flag-image {
+        width: 500px; /* Larger images on desktops */
+    }
+
+    footer {
+        padding: 40px 0;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contact-info {
+        margin-top: 0;
+    }
+}
+
+/* For large desktops (min-width: 1440px) */
+@media (min-width: 1440px) {
+    body {
+        font-size: 1.4em;
+    }
+
+    header nav ul li {
+        margin: 0 40px;
+    }
+
+    section {
+        padding: 160px 60px;
+    }
+
+    .flag-image {
+        width: 550px; /* Even larger for big screens */
+    }
+
+    footer {
+        padding: 50px 0;
+    }
+
+    .footer-content {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
 }
